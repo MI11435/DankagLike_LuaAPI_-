@@ -185,7 +185,7 @@ SCREENMAN:ResetBgImage()
 引数：Material material：背景に設定したいMaterial
 
 ```lua
-
+SCREENMAN:SetBgMaterial(material)
 ```
 
 </details>
