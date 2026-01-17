@@ -1,3 +1,3 @@
-# DankagLike_LuaAPI_-
+# DankagLike LuaAPI 非公式リファレンス
 関数についてMI11435がどのように思っているのかをつらつらと書く場所
 あとmarkdownの書き方の練習
