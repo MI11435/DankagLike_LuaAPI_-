@@ -401,12 +401,13 @@ GAMESTATE:ResetHoldTexture()
 
 <details>
 <summary>Judge構造体のメンバ変数</summary>
-+ Brilliant
-+ Great
-+ Fast
-+ Slow
-+ Bad
-+ Missed
+
+- Brilliant
+- Great
+- Fast
+- Slow
+- Bad
+- Missed
 </details>
 
 
