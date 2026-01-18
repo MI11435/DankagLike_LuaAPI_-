@@ -299,10 +299,130 @@ end
 
 </details>
 
+## SetLaneAlpha(float alpha)
+<details>
+<summary>詳細</summary>
+
+レーン(黒いやつ)の透明度を設定
+
+戻り値：なし
+
+引数：int alpha：透明度(0～1)
+
+```lua
+GAMESTATE:SetLaneAlpha(0.2)
+```
+
+</details>
+
+## ChangeJudgeEffect(int type)
+<details>
+<summary>詳細</summary>
+
+判定エフェクトを変更。
+
+戻り値：なし
+
+引数：int type：判定エフェクトの種類
+
+|番号|種類|
+|-|-|
+|0|off|
+|1|Type1|
+|2|Type2|
+|3|Type3| 
+
+**Type3?!?!?!?!?!**
+
+> [!WARNING]
+> 切替しすぎるとエラーが出る
+
+```lua
+GAMESTATE:ChangeJudgeEffect(2)
+```
+
+</details>
+
+## ChangeHoldTexture(NoteType noteType or int noteTypeIndex, Texture noteTexture)
+<details>
+<summary>詳細</summary>
+
+ホールド中に表示されるテクスチャを変更。
+
+戻り値：なし
+
+引数
+
+NoteType noteType：ノーツの種類(ロングとファジーロングが有効)
+
+int noteTypeIndex：ノーツの種類のint
+
+|番号|ノーツの種類|
+|-|-|
+|2|ロング開始|
+|3|ロング中継|
+|6|ファジーロング開始|
+|7|ファジーロング中継|
+
+Texture noteTexture：テクスチャ
+
+```lua
+local noteTexture = UTIL:LoadTexture("longStart.png")
+--どっちも同じ命令。どちらを使うかは貴方次第。
+GAMESTATE:ChangeHoldTexture(CS.NoteType.LongStart, noteTexture)
+GAMESTATE:ChangeHoldTexture(2, noteTexture)
+```
+
+</details>
+
+## ResetHoldTexture()
+<details>
+<summary>詳細</summary>
+
+ホールド中に表示されるテクスチャを元に戻す。
+
+戻り値：なし
+
+引数：なし
+
+```lua
+GAMESTATE:ResetHoldTexture()
+```
+
+</details>
+
+## GetCurrentJudge()
+<details>
+<summary>詳細</summary>
+
+現在の判定を取得。
+
+サンプルはBrilliant数を取得するコードだが、WickyPackのJudgeViewerではこれを使用していない。
+
+<details>
+<summary>Judge構造体のメンバ変数</summary>
+- Brilliant
+- Great
+- Fast
+- Slow
+- Bad
+- Missed
+</details>
 
 
+戻り値：Judge構造体
 
+引数：なし
 
+```lua
+--Brilliant数を取得
+function onHitNote(id, lane, noteType, judgeType)
+  local judge = GAMESTATE:GetCurrentJudge()
+  print(judge.Brilliant)
+end
+```
+
+</details>
 
 
 
