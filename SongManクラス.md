@@ -124,26 +124,324 @@ local bannerPath = SONGMAN:GetBannerPath()
 
 </details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+## GetArtist()
 <details>
 <summary>詳細</summary>
 
+アーティスト名を取得。
 
+戻り値：string：アーティスト名
+
+引数：なし
 
 ```lua
+local artist = SONGMAN:GetArtist()
+```
 
+</details>
+
+## GetTitle()
+<details>
+<summary>詳細</summary>
+
+タイトルを取得。
+
+戻り値：string：タイトル
+
+引数：なし
+
+```lua
+local title = SONGMAN:GetTitle()
+```
+
+</details>
+
+## GetSubtitle()
+<details>
+<summary>詳細</summary>
+
+サブタイトルを取得。
+
+戻り値：string：サブタイトル
+
+引数：なし
+
+```lua
+local subTitle = SONGMAN:GetSubtitle()
+```
+
+</details>
+
+## GetDescription()
+<details>
+<summary>詳細</summary>
+
+曲詳細(Description)を取得。
+
+戻り値：string[]：楽曲詳細
+
+引数：なし
+
+```lua
+local description = SONGMAN:GetDescription()
+```
+
+</details>
+
+## GetIllust()
+<details>
+<summary>詳細</summary>
+
+イラスト名を取得。
+
+戻り値：string：イラスト名
+
+引数：なし
+
+```lua
+local illust = SONGMAN:GetIllust()
+```
+
+</details>
+
+## GetChartArtist()
+<details>
+<summary>詳細</summary>
+
+譜面制作者名を取得。
+
+戻り値：string：譜面制作者名
+
+引数：なし
+
+```lua
+local chartArtist = SONGMAN:GetChartArtist()
+```
+
+</details>
+
+## GetBaseBpm()
+<details>
+<summary>詳細</summary>
+
+BaseBpmを取得。
+
+戻り値：float：BaseBpm
+
+引数：なし
+
+```lua
+local baseBpm = SONGMAN:GetBaseBpm()
+```
+
+</details>
+
+## GetBpms()
+<details>
+<summary>詳細</summary>
+
+Bpms(配列)を取得。
+
+戻り値：float[]：bpms
+
+引数：なし
+
+```lua
+local bpms = SONGMAN:GetBpms()
+```
+
+</details>
+
+## GetBpmPositions()
+<details>
+<summary>詳細</summary>
+
+Bpmが変化する拍位置(配列)を取得。
+
+戻り値：float[] bpmPositions
+
+引数：なし
+
+```lua
+local bpmPositions = SONGMAN:GetBpmPositions()
+```
+
+</details>
+
+## GetSpeedPositions()
+<details>
+<summary>詳細</summary>
+
+peedが変化する拍位置(配列)を取得。
+
+戻り値：float[] speedPositions
+
+引数：なし
+
+```lua
+local speedPositions = SONGMAN:GetSpeedPositions()
+```
+
+</details>
+
+## GetSpeedStretchRatios()
+<details>
+<summary>詳細</summary>
+
+Speedの値を取得。
+
+戻り値：float[] speedStretchRatios
+
+引数：なし
+
+```lua
+local speedStretchRatios = SONGMAN:GetSpeedStretchRatios()
+```
+
+</details>
+
+## GetSpeedDelayBeats()
+<details>
+<summary>詳細</summary>
+
+Speedの変化に掛かる拍数を取得。
+
+戻り値：float[] speedDelayBeats
+
+引数：なし
+
+```lua
+local speedDelayBeats = SONGMAN:GetSpeedDelayBeats()
+```
+
+</details>
+
+## GetScrollPositions()
+<details>
+<summary>詳細</summary>
+
+Scrollが変化する拍位置を取得。
+
+戻り値：float[] scrollPositions
+
+引数：なし
+
+```lua
+local scrollPositions = SONGMAN:GetScrollPositions()
+```
+
+</details>
+
+## GetScrolls()
+<details>
+<summary>詳細</summary>
+
+Scrollsの値を取得。
+
+戻り値：double[] scrolls
+
+引数：なし
+
+```lua
+local scrolls = SONGMAN:GetScrolls()
+```
+
+</details>
+
+## GetLabelPositions()
+<details>
+<summary>詳細</summary>
+
+Labelの拍位置を取得。
+
+戻り値：float[] labelPositions
+
+引数：なし
+
+```lua
+local labelPositions = SONGMAN:GetLabelPositions()
+```
+
+</details>
+
+## GetLabels()
+<details>
+<summary>詳細</summary>
+
+Labelの文字列の配列を取得。
+
+戻り値：string[] labels
+
+引数：なし
+
+```lua
+local scrolls = SONGMAN:GetLabels()
+```
+
+</details>
+
+## GetOffset()
+<details>
+<summary>詳細</summary>
+
+オフセットを取得。
+
+戻り値：float：Offset
+
+引数：なし
+
+```lua
+local offset = SONGMAN:GetOffset()
+```
+
+</details>
+
+## IsCmod()
+<details>
+<summary>詳細</summary>
+
+Cmodの場合にtrue、そうでなければfalseを返す。
+
+戻り値：bool：Cmodか
+
+引数：なし
+
+```lua
+local isCmod = SONGMAN:IsCmod()
+```
+
+</details>
+
+## GetSongDir()
+<details>
+<summary>詳細</summary>
+
+曲のディレクトリ(譜面フォルダ)を取得。
+
+dlファイルを読み込むときにこれを使おう。
+
+戻り値：string：曲のディレクトリ(譜面フォルダ)
+
+引数：なし
+
+```lua
+local path = SONGMAN:GetSongDir()
+```
+
+</details>
+
+## MusicLengthSeconds()
+<details>
+<summary>詳細</summary>
+
+楽曲の長さの秒数を取得。
+
+戻り値：float：楽曲の長さ(秒)
+
+引数：なし
+
+```lua
+local musicLength = SONGMAN:MusicLengthSeconds()
 ```
 
 </details>
